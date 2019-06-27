@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "struts-2.1.7.dtd" >
+<struts>
+	
+	<!--地址模块 -->
+	<package name="address" extends="struts-default" namespace="/address">
+		
+		<!-- 根据userId查询地址 -->
+		<action name="selectAddressByUserId" class="com.sias.action.AddressAction" method="selectAddressByUserId">
+			<result>/front/address1.jsp</result>
+			<result name="error" type="redirect">
+				/front/login1.jsp
+			</result>
+		</action>
+		
+		<!-- 根据addressId查询地址 -->
+		<action name="selectAddressByAddressId" class="com.sias.action.AddressAction" method="selectAddressByAddressId">
+			<result>/front/address1.jsp</result>
+		</action>
+		
+		
+	</package>
+
+</struts>

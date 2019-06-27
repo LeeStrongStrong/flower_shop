@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "struts-2.1.7.dtd" >
+<struts>
+	
+	<!-- 修改struts2中文件上传大小的默认配置
+		单位是:字节  这里是最大200M -->
+	<constant name="struts.multipart.maxSize" value="209715200"/>
+	<!-- 鲜花模块 -->
+	<package name="flower" extends="struts-default" namespace="/flower">
+
+		<!-- 前台:查询一鲜花详情 -->
+		<action name="findDetail" class="com.sias.action.FlowerAction" method="findDetail">
+			<result>/front/detail_flower1.jsp</result>
+		</action>
+
+		<!--查询首页-->
+		<action name="findAllCategoryAndFlower" method="findAllCategoryAndFlower" class="com.sias.action.FlowerAction">
+			<result>/front/index1.jsp</result>
+		</action>
+<!-- ********************************************************************************-->
+		
+		<!-- 后台:查询所有鲜花的方法 -->
+		<action name="findAll" class="com.sias.action.FlowerAction" method="findAll">
+			<result>/back/menu/stamen.jsp</result>
+			<result name="error" type="redirect">/back/login.jsp</result>
+		</action>
+		
+		<!-- 后台:查询一个鲜花和所有分类的方法 -->
+		<action name="selectOneAndCategory" class="com.sias.action.FlowerAction" method="selectOneAndCategory">
+			<result>/back/menu/go-update.jsp</result>
+		</action>
+		
+		<!-- 后台:添加鲜花的时候先查询类别 -->
+		<action name="selectAllCategory" class="com.sias.action.FlowerAction" method="selectAllCategory">
+			<result >/back/menu/go-new.jsp</result>
+		</action>
+
+		<!--添加鲜花-->
+		<action name="add" class="com.sias.action.FlowerAction" method="add">
+			<result type="redirectAction">findAll</result>
+		</action>
+
+		<!-- 后台:更新鲜花的方法 -->
+		<action name="updateFlower" class="com.sias.action.FlowerAction" method="updateFlower">
+			<result type="redirectAction">findAll</result>
+		</action>
+
+		<!-- 后台:删除鲜花的方法 -->
+		<action name="remove" class="com.sias.action.FlowerAction" method="remove">
+			<result type="redirectAction">findAll</result>
+		</action>
+		
+		<!-- 后台:模糊查询 -->
+		<action name="findBySth" class="com.sias.action.FlowerAction" method="findBySth">
+			<result>/back/menu/stamen.jsp</result>
+		</action>
+
+	</package>
+
+</struts>

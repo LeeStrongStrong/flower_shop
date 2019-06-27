@@ -1,0 +1,77 @@
+body{
+    background-color: #F7F7F7;
+}
+header{
+    height: 150px;
+    overflow: hidden;
+}
+header .logo{
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+header .logo a{
+    display: block;
+}
+header .logo img {
+    height: 150px;
+}
+header .right{
+    float: right;
+}
+header .right li{
+    float: left;
+    height: 150px;
+    width: 80px;
+    text-align: center;
+    padding-top: 45px;
+    color: #cccbca;
+}
+header .right li i{
+    display: block;
+    font-size: 50px;
+    color: yellowgreen;
+    line-height: 65px;
+}
+main>.bx{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    margin-top: 50px;
+    padding: 8px;
+}
+main .banner{
+    width: 50%;
+    height: 350px;
+    float: left;
+    background: url("../img/banner_bg.jpg") 20% 20% no-repeat;
+}
+main .login{
+    width: 50%;
+    height: 350px;
+    float: right;
+    padding-top: 30px;
+}
+main .login input{
+    width: 80%;
+    height: 50px;
+    margin-left: 90px;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    padding-left: 50px;
+}
+main .login input[type = submit]{
+    background-color: #ff3d31;
+    margin-top: 50px;
+    font-size: 28px;
+    padding-left: 0;
+}
+main .login .input-group{
+    position: relative;
+}
+main .login .input-group i{
+    position: absolute;
+    left: 100px;
+    top: 40px;
+    font-size: 30px;
+    color: #ccc;
+}

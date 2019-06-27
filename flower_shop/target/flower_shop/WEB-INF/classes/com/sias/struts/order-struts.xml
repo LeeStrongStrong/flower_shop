@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "struts-2.1.7.dtd" >
+<struts>
+	
+	<!--订单模块 -->
+	<package name="order" extends="struts-default" namespace="/order">
+		<!-- 添加订单 -->
+		<action name="addOrder" class="com.sias.action.OrderAction" method="addOrder">
+			<result>/front/order_ok.jsp</result>
+		</action>
+		
+		<!-- 查询所有的订单 -->
+		<action name="selectAllOrder" class="com.sias.action.OrderAction" method="selectAllOrder">
+			<result>/back/menu/order.jsp</result>
+			<result name="error" type="redirect">/back/login1.jsp</result>
+		</action>
+		
+		<!-- 根据id查询订单 -->
+		<action name="selectOrderById" class="com.sias.action.OrderAction" method="selectOrderById">
+			<result>/back/menu/details.jsp</result>
+		</action>
+		
+	</package>
+
+</struts>

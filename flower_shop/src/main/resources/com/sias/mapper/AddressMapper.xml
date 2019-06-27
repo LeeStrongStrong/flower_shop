@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sias.dao.AddressDao">
+  	
+	<!--根据用户id查询他所有的地址信息-->
+	<select id="selectAddressByUserId" parameterType="String" resultType="Address">
+		select * from f_address where userId=#{userId}
+	</select>
+
+	<!--根据地址id查询一个地址信息-->
+	<select id="selectAddressByAddressId" parameterType="String" resultType="Address">
+		select * from f_address where id=#{addressId}
+	</select>
+
+	<!--添加新的地址信息-->
+	<insert id="addAddress" parameterType="Address">
+		insert into f_address values(
+			#{id},#{name},#{phone},#{local},#{code},#{userId}
+		)
+	</insert>
+
+	<!--更新地址信息-->
+	<update id="updateAddress" parameterType="Address">
+		update f_address set
+		  name=#{name},local=#{local},code=#{code},
+		  phone=#{phone},userId=#{userId}
+		where id=#{id}
+	</update>
+
+
+</mapper>

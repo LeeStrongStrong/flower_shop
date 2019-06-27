@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "struts-2.1.7.dtd" >
+<struts>
+	<!--类别模块 -->
+	<package name="category" extends="struts-default" namespace="/category">
+
+		<!--后台:查询所有类别 -->
+		<action name="findAll" class="com.sias.action.CategoryAction" method="findAll">
+			<result>/back/menu/category.jsp</result>
+			<result name="error" type="redirect">/back/login.jsp</result>
+		</action>
+
+		<!--后台:添加类别 -->
+		<action name="addCategory" class="com.sias.action.CategoryAction" method="addCategory">
+			<result type="redirectAction">findAll</result>
+		</action>
+
+		<!-- 后台:删除类别 -->
+		<action name="removeCategory" class="com.sias.action.CategoryAction" method="removeCategory">
+			<result type="redirectAction">findAll</result>
+		</action>
+		
+	</package>
+
+</struts>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sias.dao.OrderDao">
+
+	<resultMap type="Order" id="orderMap">
+		<id column="oid" property="id"/>
+		<result column="orderNo" property="orderNo"/>
+		<result column="total" property="total"/>
+		<result column="createDate" property="createDate"/>
+		<result column="addressId" property="addressId"/>
+		<result column="userId" property="userId"/>
+
+		<association property="address" javaType="Address">
+			<id column="aid" property="id"/>
+			<result column="name" property="name"/>
+			<result column="phone" property="phone"/>
+			<result column="local" property="local"/>
+			<result column="code" property="code"/>
+			<result column="userId" property="userId"/>
+		</association>
+
+	</resultMap>
+	<!-- 添加订单 -->
+	<insert id="addOrder" parameterType="Order">
+ 		insert into f_order values
+ 		(#{id},#{orderNo},#{total},#{createDate},#{addressId},#{userId})
+ 	</insert>
+
+	<!-- 查询所有的订单信息 -->
+	<select id="selectAllOrder" resultMap="orderMap">
+ 		select
+ 			o.id oid,o.orderNo,o.total,o.createDate,o.addressId,o.userId,
+ 			a.id aid,a.name,a.phone,a.local,a.code,a.userId
+ 			from f_order o left join f_address a on o.addressId=a.id
+ 	</select>
+
+	<!-- 查询一个订单信息 -->
+	<select id="selectOrderById" resultType="Order" parameterType="String">
+ 		select * from f_order where id=#{id}
+ 	</select>
+
+	<!-- 查询该订单下所有的订单项 -->
+	<select id="selectAllOrderItem" parameterType="String" resultMap="orderItemMap">
+ 		select
+ 			i.id iid,
+ 			i.flowerId,
+ 			i.count,
+ 			i.orderId,
+ 				f.id fid,
+ 				f.name,
+ 				f.image,
+ 				f.price,
+ 				f.myprice
+ 			from f_item i left join f_flower f on i.flowerId = f.id
+ 			where i.orderId=#{orderId}
+ 	</select>
+
+	<resultMap type="OrderItem" id="orderItemMap">
+		<id column="iid" property="id"/>
+		<result column="flowerId" property="flowerId"/>
+		<result column="count" property="count"/>
+		<result column="orderId" property="orderId"/>
+		<association property="flower" javaType="Flower">
+			<id column="bid" property="id"/>
+			<result column="name" property="name"/>
+			<result column="image" property="image"/>
+			<result column="price" property="price"/>
+			<result column="myprice" property="myprice"/>
+		</association>
+	</resultMap>
+
+</mapper>

@@ -1,0 +1,50 @@
+
+
+
+
+
+
+
+
+
+
+      
+ <!--第一部分-->
+                                    <div id="pd_one_1" class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object" src="imgs/ewm_xzh.jpg" alt="二维码" width="140">
+                                            </a>
+                                        </div>
+                                        <div class="media-body text-muted" style="padding-top: 100px">
+                                            <h5 class="media-heading">更多资讯欢迎</h5>
+                                            <h5 class="media-heading">关注撩课学院</h5>
+                                        </div>
+                                    </div>
+                                    <!--第二部分-->
+                                    <ol id="pd_one_2" class="breadcrumb lead">
+                                        <li>
+                                            <a href="#">HTML5+全栈</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Python+人工智能</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">JavaEE</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Go语言+区块链</a>
+                                        </li>
+                                    </ol>
+                                    <!--第三部分-->
+                                    <h1 id="pd_one_3">
+                                        欢迎来到IT人的在线大学&nbsp;&nbsp;
+                                        <strong class="text-danger">撩课学院</strong>
+                                    </h1>
+                                    <!--第四部分-->
+                                    <div id="pd_one_4">
+                                        <button class="btn btn-primary btn-lg" type="submit" style="margin-right: 20px;">
+                                            课程咨询
+                                        </button>
+                                        <button class="btn btn-default btn-lg" type="submit">了解更多</button>
+                                    </div>

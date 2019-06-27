@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "struts-2.1.7.dtd" >
+<struts>
+	
+	<!--管理员模块 -->
+	<package name="admin" extends="struts-default" namespace="/admin">
+		<!-- 后台:管理员登录 -->
+		<action name="login" class="com.sias.action.AdminAction" method="login">
+			<result type="redirect">/back/menu/menu.jsp</result>
+			<result name="error">/back/login.jsp</result>
+		</action>
+
+		<!--后台:安全退出 -->
+		<action name="safeOut" class="com.sias.action.AdminAction" method="safeOut">
+			<result type="redirect">/back/login.jsp</result>
+		</action>
+
+	</package>
+
+</struts>

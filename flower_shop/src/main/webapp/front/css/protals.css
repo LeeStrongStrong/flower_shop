@@ -1,0 +1,325 @@
+﻿/***********************通用的样式**********************/
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
+}
+
+a:hover{
+    color: #f56600;
+}
+
+.btn-register {
+    color: #FFFFFF;
+    background-color: #0AB4F7;
+    border-color: #F4F7F7;
+}
+
+.btn-register:hover,
+.btn-register:focus,
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+    color: #FFFFFF;
+    background-color: #086DF2;
+    border-color: #F4F7F7;
+}
+
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+    background-image: none;
+}
+
+.btn-register.disabled,
+.btn-register[disabled],
+fieldset[disabled] .btn-register,
+.btn-register.disabled:hover,
+.btn-register[disabled]:hover,
+fieldset[disabled] .btn-register:hover,
+.btn-register.disabled:focus,
+.btn-register[disabled]:focus,
+fieldset[disabled] .btn-register:focus,
+.btn-register.disabled:active,
+.btn-register[disabled]:active,
+fieldset[disabled] .btn-register:active,
+.btn-register.disabled.active,
+.btn-register[disabled].active,
+fieldset[disabled] .btn-register.active {
+    background-color: #0AB4F7;
+    border-color: #F4F7F7;
+}
+
+.btn-register .badge {
+    color: #0AB4F7;
+    background-color: #FFFFFF;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot');
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/iconfont.woff2') format('woff2'),
+    url('../fonts/iconfont.woff') format('woff'),
+    url('../fonts/iconfont.ttf') format('truetype'),
+    url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: pink;
+}
+
+
+#yj_about, #yj_hot, #yj_link{
+    padding: 20px 0;
+}
+
+#yj_about .title, #yj_hot .title, #yj_link .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+
+
+/***********************通用的样式***********************/
+
+
+/***********************头部的样式***********************/
+#yj_header{
+
+}
+
+#yj_header .top-bar{
+    height: 40px;
+    line-height: 39px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#yj_header .top-bar .container .row>div+div{
+    border-left: 1px solid #e0e0e0;
+}
+
+
+#yj_header .top-bar .container .row .top-bar-1 a{
+    position: relative;
+}
+
+#yj_header .top-bar .container .row .top-bar-1 a img{
+    display: none;
+
+    position: absolute;
+    left: 50%;
+    margin-left: -65px;
+    margin-top:  -10px;
+
+    z-index: 9999;
+}
+
+#yj_header .top-bar .container .row .top-bar-1 a:hover img{
+    display: block;
+}
+
+.icon-phone::before{
+    content: '\e958';
+    font-size: 13px;
+}
+
+.icon-tel::before{
+    content: '\e942';
+    font-size: 13px;
+}
+
+
+#yj_header .navbar-yj{
+    background-color: #fff;
+    margin-bottom: 0;
+}
+
+#yj_header .navbar-yj .navbar-brand{
+    height: 70px;
+    padding: 0 15px;
+}
+
+#yj_header .navbar-yj .navbar-nav a{
+    height: 70px;
+    line-height: 40px;
+}
+
+#yj_header .navbar-yj .navbar-nav li.active a,
+#yj_header .navbar-yj .navbar-nav li a:hover{
+    background-color: transparent;
+    border-bottom: 2px solid #0AB4F7;
+}
+
+#yj_header .navbar-yj .navbar-toggle {
+    margin-top: 18px;
+}
+
+
+/***********************头部的样式***********************/
+
+/***********************焦点图的样式***********************/
+
+#yj_carousel .item{
+    background: no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+@media screen  and ( min-width: 800px){
+    #yj_carousel .item{
+          height: 410px;
+    }
+}
+/***********************焦点图的样式***********************/
+
+/***********************关于我们的样式***********************/
+#yj_about .row p{
+    line-height: 29px;
+    font-size: 15px;
+}
+/***********************关于我们的样式***********************/
+
+/***********************产品特色的样式***********************/
+#yj_product{
+    background-color: #f0f0f0;
+    padding: 30px 0;
+}
+
+#yj_product .nav{
+   font-size: 18px;
+}
+
+#yj_product .nav a{
+    color: #999;
+}
+
+#yj_product .nav li.active a{
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #0AB4F7;
+    color: #000;
+}
+
+#yj_product .tab-content{
+    padding-top: 20px;
+}
+
+#yj_product .pd-left{
+    padding: 40px 0;
+}
+#yj_product .quot{
+    line-height: 45px;
+    margin-top: 40px;
+    padding: 66 0px;
+    font-size: 22px;
+    text-indent: 2em;
+}
+
+
+#pd_one_1{
+    margin: 15px 0;
+}
+
+#pd_one_2{
+    background-color: transparent;
+}
+
+#pd_one_4{
+    margin: 15px 0;
+}
+
+/***********************产品特色的样式***********************/
+
+/***********************热门商品的样式***********************/
+#yj_hot .lesson{
+    padding: 15px 10px;
+}
+
+#yj_hot .lesson .media-left{
+    width: 20%;
+}
+
+#yj_hot .lesson .media-body{
+    width: 60%;
+    vertical-align: middle;
+}
+
+#yj_hot .lesson .media-right{
+    width: 20%;
+    text-align: left;
+    font-size: 16px;
+    vertical-align: middle;
+}
+/***********************热门商品的样式***********************/
+
+/***********************友情链接的样式***********************/
+#yj_link .logos{
+    list-style: none;
+    text-align: center;
+}
+
+#yj_link .logos li{
+    display: inline-block;
+    padding: 20px 30px;
+}
+/***********************友情链接的样式***********************/
+
+
+/***********************尾部的样式***********************/
+#yj_footer{
+    width: 100%;
+    height: 200px;
+    background: url("../imgs/ft_bg.png ") no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    color: #fff;
+    font-size: 16px;
+}
+
+#yj_footer ul{
+    list-style: none;
+}
+
+#yj_footer .one, #yj_footer .two{
+    padding: 10px;
+    border-right: 1px solid #666;
+    height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#yj_footer .one li{
+    line-height: 40px;
+}
+
+#yj_footer .one li a{
+    color: #fff;
+}
+
+#yj_footer .three{
+    padding: 10px 50px;
+    height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#yj_footer .three a{
+    margin-right: 15px;
+    text-decoration: none;
+}
+/***********************尾部的样式***********************/
+

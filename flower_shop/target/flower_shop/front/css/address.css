@@ -1,0 +1,59 @@
+body{
+    border-color: #ccc;
+}
+main .bx{
+    height: 600px;
+    padding-top: 50px;
+}
+main .order_shipping{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #000;
+    position: relative;
+}
+main .order_shipping .order_title{
+    line-height: 40px;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    text-indent: 2em;
+}
+main .order_shipping .order_content{
+    padding-top: 25px;
+}
+main .order_shipping .order_content .group{
+    width: 50%;
+    margin: 0 auto;
+}
+main .order_shipping .input-group{
+    height: 50px;
+}
+main .order_shipping .input-group leble{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+main .order_shipping .input-group input,
+main .order_shipping .input-group select{
+    height: 30px;
+    width: 300px;
+}
+
+main .order_shipping button {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    color: #000;
+    background-color: #f56600;
+    border: 1px solid #f56600;
+    border-radius: 8px;
+    margin-top: 50px;
+    position: absolute;
+    bottom: -88px;
+    cursor: pointer;
+}
+main .order_shipping .back{
+    left: 25%;
+}
+main .order_shipping button:last-child{
+    right: 25%;
+}

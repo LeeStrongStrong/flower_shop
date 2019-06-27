@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sias.dao.FlowerDao">
+
+	<!--类别的map-->
+	<resultMap id="flowerMap" type="Flower">
+		<id property="id" column="fid"/>
+		<result property="name" column="fname"/>
+		<result property="material" column="material"/>
+		<result property="image" column="image"/>
+		<result property="language" column="language"/>
+		<result property="price" column="price"/>
+		<result property="myprice" column="myprice"/>
+		<result property="sale" column="sale"/>
+		<result property="categoryId" column="categoryId"/>
+
+		<association property="category" javaType="Category">
+			<id property="id" column="cid"/>
+			<result property="name" column="cname"/>
+		</association>
+	</resultMap>
+
+	<!--前台：根据鲜花的id更新-->
+  	<update id="updateFlowerSale">
+		update f_flower set sale=sale+#{count}
+  		where id =#{id}
+	</update>
+
+	<!--前台:根据类别查询鲜花-->
+	<select id="selectFlowerByCategoryId" parameterType="String" resultMap="flowerMap">
+		  select f.id fid,f.name fname,f.material,f.image,f.language,f.price,f.myprice,f.sale,f.categoryId,
+		  		  c.id cid,c.name cname
+		  from f_flower f,f_category c
+		  where f.categoryId = c.id and f.categoryId=#{categoryId}
+		  order by RAND()
+	</select>
+
+	<!--前台:查询销量前8的鲜花信息-->
+ 	<select id="selectBySale" resultType="Flower">
+		select * from f_flower order by sale desc  limit 0,8
+	</select>
+
+	<select id="selectFlowerByRecommend" resultType="Flower">
+		select * from f_flower
+		order by rand() limit 8
+	</select>
+
+	<!--*******************************************************************************-->
+
+	<!--后台：查询所有鲜花信息-->
+	<select id="selectAll" resultType="Flower">
+		  select * from f_flower
+	</select>
+
+	<!--后台：查询一个鲜花的信息-->
+	<select id="selectOne" resultMap="flowerMap" parameterType="String">
+		   select f.id fid,f.name fname,f.material,f.image,f.language,f.price,f.myprice,f.sale,f.categoryId,
+		  		  c.id cid,c.name cname
+		  from f_flower f,f_category c
+		  where f.categoryId = c.id
+		  and f.id=#{id}
+	</select>
+
+	<!--后台：添加一个鲜花信息-->
+	<insert id="add" parameterType="Flower">
+		insert into f_flower values(
+			#{id},#{name},#{material},#{image},#{language},#{price},
+			#{myprice},#{sale},#{categoryId}
+		)
+	</insert>
+
+	<!--后台：更新鲜花信息-->
+	<update id="update" parameterType="Flower">
+		update f_flower set
+		name=#{name},material=#{material},<if test="image!=null">image=#{image},</if>language=#{language},
+		price=#{price},myprice=#{myprice},categoryId=#{categoryId}
+		where id=#{id}
+	</update>
+
+	<!--后台：删除鲜花信息-->
+	<delete id="delete" parameterType="String">
+		delete from f_flower where id=#{id}
+	</delete>
+
+	<select id="selectBySth" resultType="Flower">
+		select * from f_flower f
+		<where>
+			<if test="key=='name'">
+				f.name like '%${content}%'
+			</if>
+			<if test="key=='material'">
+				f.material like '%${content}%'
+			</if>
+			<if test="key=='language'">
+				f.language like '%${content}%'
+			</if>
+		</where>
+	</select>
+
+</mapper>

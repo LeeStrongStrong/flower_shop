@@ -1,0 +1,133 @@
+main .none{
+    position: relative;
+}
+
+main .none a{
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    padding: 5px 10px;
+    color: #0d0d0d;
+    background-color: #f56600;
+    border-radius: 8px;
+}
+main .none a:hover{
+    color: #fff;
+}
+/*订单存在是购物车状态*/
+main .exist{
+    height: 600px;
+    padding-top: 20px;
+}
+main .exist .hd{
+    padding: 0 40px;
+    background-color: #f5f5f5;
+}
+main .exist .order-title{
+    overflow: hidden;
+}
+main .exist .order-title li{
+    width: 150px;
+    float: left;
+    padding: 8px 0;
+    text-align: left;
+}
+main .exist .order-title .product{
+    width: 500px;
+}
+/*订单详情页面*/
+main .exist .out{
+    border: 1px solid #ccc;
+}
+main .exist .bd{
+    padding: 0 8px;
+    /*overflow-y: scroll;*/
+    /*height: 440px;*/
+}
+
+main .exist .order-list{
+    border-top: 1px dashed #cccbca;
+    overflow: hidden;
+}
+main .exist .order-list:first-child{
+    border-top: 1px dashed transparent;
+}
+main .exist .order-list li{
+    float: left;
+    padding: 8px 0px;
+    line-height: 50px;
+    width: 130px;
+    text-align: center;
+}
+main .exist .order-list li:first-child{
+    width: 500px;
+    overflow: hidden;
+}
+main .exist .order-list li:first-child input{
+    float: left;
+    margin-top: 25px;
+}
+main .exist .order-list li:first-child img{
+    float: left;
+    width: 50px;
+    height: 56px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+main .exist .order-list li:first-child p{
+    float: left;
+    margin-left: 8px;
+}
+main .exist .order-list .market-price{
+   padding-right: 28px;
+}
+main .exist .order-list .order-price{
+    padding-left: 12px;
+    color: #f56600;
+}
+main .exist .order-list .num input{
+    width: 50px;
+}
+main .exist .order-list .num,
+main .exist .order-list .operate{
+    margin-left: 22px;
+}
+main .exist .set-info{
+    margin-top: 20px;
+    height: 52px;
+    border: 1px solid #ccc;
+    padding-left: 25px;
+}
+main .exist .set-info a{
+    line-height: 52px;
+    position: relative;
+    padding-left: 35px;
+}
+main .exist .set-info a i{
+    font-size: 32px;
+    line-height: 52px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+main .exist .set-info button{
+    float: right;
+    width: 120px;
+    height: 50px;
+    font-size: 22px;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #f56600;
+    background-color: #f56600;
+}
+main .exist .set-info .set-stat{
+    float: right;
+    font-size: 16px;
+    line-height: 52px;
+    margin-right: 25px;
+}
+main .exist .set-info .set-stat span{
+    font-size: 18px;
+    color: #f56600;
+}
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "struts-2.1.7.dtd" >
+<struts>
+	<!--管理员模块 -->
+	<package name="user" extends="struts-default" namespace="/user">
+		<!-- 验证码 -->
+		<action name="getImage" class="com.sias.action.UserAction" method="getImage"/>
+		<!-- 登录功能 -->
+		<action name="login" class="com.sias.action.UserAction" method="login">
+			<result type="redirectAction">
+				<param name="namespace">/flower</param>
+				<param name="actionName">findAllCategoryAndFlower</param>
+			</result>
+			<result name="error">/front/login1.jsp</result>
+		</action>
+		
+		<!-- 注册 -->
+		<action name="regist" class="com.sias.action.UserAction" method="regist">
+			<result type="redirectAction">
+				<param name="namespace">/flower</param>
+				<param name="actionName">findAllCategoryAndFlower</param>
+			</result>
+			<result name="error">/front/register1.jsp</result>
+		</action>
+
+		<!-- 安全退出 -->
+		<action name="exit" class="com.sias.action.UserAction" method="exit">
+			<result type="redirectAction">
+				<param name="namespace">/flower</param>
+				<param name="actionName">findAllCategoryAndFlower</param>
+			</result>
+		</action>
+		
+		<!-- ************************************************************* -->
+		
+		<!-- 后台:查询所有的用户信息 -->
+		<action name="selectAllUser" class="com.sias.action.UserAction" method="selectAllUser">
+			<result>/back/menu/user-admin.jsp</result>
+			<result name="error" type="redirect">/back/login.jsp</result>
+		</action>
+		
+		<!-- 更新用户的状态 -->
+		<action name="updateStatus" class="com.sias.action.UserAction" method="updateStatus">
+			<result type="redirectAction">selectAllUser</result>
+		</action>
+		
+	</package>
+
+</struts>

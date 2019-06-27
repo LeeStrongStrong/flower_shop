@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+a:hover {
+    color: #ff6700;
+}
+
+.bx {
+    width: 1200px;
+    margin: 0 auto;
+}
+.current {
+    background-color: hotpink;
+}
+body{
+    font-size: 14px;
+    font-family: arial,"Hiragino Sans GB","Microsoft YaHei","微軟正黑體  ","儷黑 Pro",sans-serif;
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot');
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/iconfont.woff2') format('woff2'),
+    url('../fonts/iconfont.woff') format('woff'),
+    url('../fonts/iconfont.ttf') format('truetype'),
+    url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*头部部分*/
+header{
+    height: 150px;
+    overflow: hidden;
+    background:url("../img/menu_bg.jpg") no-repeat top center;
+    background-size: cover;
+}
+header .logo{
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+header .logo a{
+    display: block;
+}
+header .logo img {
+    height: 150px;
+}
+header h2{
+    float: left;
+    font-size: 45px;
+    font-weight: normal;
+    margin-left: 165px;
+    margin-top: 40px;
+}
+header input{
+    width: 150px;
+    height: 50px;
+    float: right;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    transition: .5s;
+    cursor: pointer;
+}
+header input:hover{
+    background-color: hotpink;
+    border: 1px solid hotpink;
+}
+/*头部部分结束*/
+
+/* 尾部开始 */
+footer{
+    background-color: #f5f5f5;
+    margin-top: 15px;
+}
+footer>div{
+    height: 100%;
+}
+footer .footer-service{
+    height: 80px;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 27px 0;
+}
+footer>div ul li{
+    float: left;
+    width: 19.8%;
+    height: 25px;
+    border-left: 1px solid #e0e0e0;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+}
+footer>div ul li:first-child{
+    border-left: 0;
+}
+footer>div ul li i{
+    margin-right: 8px;
+    color: hotpink;
+}
+footer .footer-links{
+    padding: 40px 0;
+    overflow: hidden;
+}
+footer .footer-links .col-links{
+    float: left;
+    width: 189px;
+    height: 112px;
+    margin: 0;
+}
+footer .footer-links .col-links dd{
+    margin: 10px 0 0;
+    font-size: 12px;
+}
+footer .footer-links .col-contact {
+    float: right;
+    width: 251px;
+    height: 112px;
+    border-left: 1px solid #e0e0e0;
+    text-align: center;
+    color: #616161;
+}
+
+footer .footer-links .col-contact p {
+    margin: 0 0 16px;
+    font-size: 12px;
+}
+
+footer .footer-links .col-contact .phone {
+    margin: 0 0 5px;
+    font-size: 22px;
+    line-height: 1;
+    color: #ff6700;
+}
+footer .footer-links .col-contact a{
+    width: 118px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 28px;
+    display: block;
+    border: 1px solid #ff6700;
+    background: #fff;
+    color: #ff6700;
+    margin: 0 auto;
+    transition: 1s;
+}
+footer .footer-links .col-contact a:hover{
+    background-color: #ff6700;
+    color: white;
+}
+footer .site-info {
+    padding: 30px 0;
+    font-size: 12px;
+}
+/* 尾部结束 */
+

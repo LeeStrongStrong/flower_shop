@@ -1,0 +1,146 @@
+main{
+    background-color: #ccc;
+}
+main>.bx{
+    overflow: hidden;
+}
+main aside{
+    width: 150px;
+    height: 600px;
+    border: 2px solid saddlebrown;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    padding: 5px 16px 0;
+    float: left;
+}
+main aside h3{
+    margin-top: 25px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 22px;
+    border-bottom: 2px solid #000;
+}
+main aside li{
+    height: 40px;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: .5s;
+    box-shadow: 0 2px 2px rgba(10, 16, 20, .24), 0 0 2px rgba(10, 16, 20, .12);
+}
+main aside li:hover{
+    background-color: hotpink;
+    border: 1px solid hotpink;
+}
+main .right{
+    width: 1050px;
+    height: 600px;
+    float: right;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid saddlebrown;
+    border-top: 1px solid transparent;
+    overflow-y: scroll;
+}
+main .right h3{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #ccc;
+    font-size: 22px;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+main .right .group{
+    overflow: hidden;
+    width: 750px;
+    margin: 0 auto;
+}
+main .right select{
+    width: 120px;
+    height: 30px;
+    float: left;
+    text-indent: .5em;
+}
+
+main input[type = text]{
+    width: 220px;
+    height: 30px;
+    border: 1px solid #ccc;
+    margin-left: 90px;
+    float: left;
+    text-indent: 1em;
+}
+main .right input[type = button]{
+    width: 120px;
+    height: 30px;
+    border: 1px solid #ccc;
+    float: left;
+    cursor: pointer;
+}
+main .right .group .new{
+    float: right;
+    display: inline-block;
+    width: 101px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #ccc;
+    text-align: center;
+    color: #0d0d0d;
+}
+main .right .group .new:hover{
+    color: #f0f0f0;
+    background-color: #000;
+}
+main .right table{
+    width: 80%;
+    height: 80%;
+    margin: 10px auto;
+    /*合并td之间的间距*/
+    border-collapse: collapse ;
+    text-align: center;
+    font-size: 12px;
+}
+main .right table tr:last-child td{
+    height: 0;
+    border: 0;
+}
+main .right table th{
+    border: 1px solid #000;
+    text-align: center;
+    height: 40px;
+
+}
+main .right table td{
+    width: 210px;
+    height: 40px;
+    border: 1px solid #000;
+    text-align: center;
+}
+main .right table td>span{
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    box-shadow: 0 2px 2px rgba(10, 16, 20, .24), 0 0 2px rgba(10, 16, 20, .12);
+}
+main .right table td>span:hover{
+    box-shadow: 0 8px 8px rgba(10, 16, 20, .24), 0 0 8px rgba(10, 16, 20, .12);
+}
+.delete{
+    background-color: red;
+}
+.change{
+    background-color: yellow;
+    padding: 0 ;
+}

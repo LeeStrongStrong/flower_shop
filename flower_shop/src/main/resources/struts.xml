@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "struts-2.1.7.dtd" >
+<struts>
+	<include file="com/sias/struts/admin-struts.xml"/>
+	<include file="com/sias/struts/category-struts.xml"/>
+	<include file="com/sias/struts/user-struts.xml"/>
+	<include file="com/sias/struts/order-struts.xml"/>
+	<include file="com/sias/struts/flower-struts.xml"/>
+	<include file="com/sias/struts/cart-struts.xml"/>
+	<include file="com/sias/struts/address-struts.xml"/>
+</struts>

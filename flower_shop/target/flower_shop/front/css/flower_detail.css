@@ -1,0 +1,67 @@
+body {
+    box-sizing: border-box;
+}
+
+main > div {
+    height: 700px;
+    background-color: #F5F5F5;
+}
+
+main .product-wrapper {
+    padding: 30px;
+    border: 1px solid #d9d9d9;
+}
+
+main .product-l {
+    float: left;
+    width: 520px;
+}
+main .product-l .pro-preview {
+    width: 450px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+main .product-l .pro-preview > img {
+    display: block;
+    width: 450px;
+    /*height: 469px;*/
+    /*padding: 45px;*/
+}
+
+main .product-r {
+    float: right;
+    width: 560px;
+    padding-top: 15px;
+}
+
+main .product-r section {
+    border-bottom: 1px solid #ccc;
+    line-height: 45px;
+    padding-top: 15px;
+}
+
+main .product-r section:last-child {
+    border-bottom: 0;
+}
+
+main .product-r .boo {
+    color: #f56600;
+}
+
+main .product-r .price span {
+    margin-right: 20px;
+}
+
+main .product-r .price a {
+    display: block;
+    width: 160px;
+    height: 42px;
+    background-color: #f56600;
+    text-align: center;
+    line-height: 35px;
+    font-size: 18px;
+    padding: 5px 25px;
+    color: #f0f0f0;
+}
+

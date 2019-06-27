@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "struts-2.1.7.dtd" >
+<struts>
+	
+	<!--购物车模块 -->
+	<package name="cart" extends="struts-default" namespace="/cart">
+		
+		<!-- 添加购物车 -->
+		<action name="addCart" class="com.sias.action.CartAction" method="addCart">
+			<result type="redirect">/front/shopping.jsp</result>
+		</action>
+		
+		<!-- 删除购物车 -->
+		<action name="deleteCart" class="com.sias.action.CartAction" method="delete">
+			<result type="redirect">/front/shopping.jsp</result>
+		</action>
+		
+		<!-- 更新购物车 -->
+		<action name="updateCart" class="com.sias.action.CartAction" method="update">
+			<result type="redirect">/front/shopping.jsp</result>
+		</action>
+		
+	</package>
+
+</struts>

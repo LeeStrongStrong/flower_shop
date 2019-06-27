@@ -1,0 +1,371 @@
+body {
+    background: #f5f5f5;
+    height: 2000px;
+}
+
+/* 主题开始 */
+main {
+    height: 440px;
+}
+
+main .bx {
+    overflow: hidden;
+}
+
+/*侧边栏部分*/
+main aside {
+    height: 440px;
+    width: 17%;
+    float: left;
+    background-color: #fff;
+}
+
+main aside > ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main aside > ul > li {
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    font-size: 22px;
+    line-height: 46px;
+    position: relative;
+    padding-left: 25px;
+}
+
+main aside > ul > li::after {
+    content: ">";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+
+main aside > ul > li:hover {
+    background-color: #ff6700;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+main aside > ul > li:hover a {
+    color: #000d04;
+}
+
+main .nav_list {
+    width: 850px;
+    height: 440px;
+    background-color: #fff;
+    position: absolute;
+    display: none;
+    left: 204px;
+    z-index: 1;
+}
+
+main .nav_list li {
+    box-shadow: #000d04;
+}
+
+main aside > ul > li:hover .nav_list {
+    display: block;
+    background-color: #f2dede;
+}
+
+aside > ul > li:first-child .nav_list {
+    top: 0;
+}
+
+aside > ul > li:nth-child(2) .nav_list {
+    top: -55px;
+}
+
+aside > ul > li:nth-child(3) .nav_list {
+    top: -110px;
+}
+
+aside > ul > li:nth-child(4) .nav_list {
+    top: -165px;
+}
+
+aside > ul > li:nth-child(5) .nav_list {
+    top: -220px;
+}
+
+aside > ul > li:nth-child(6) .nav_list {
+    top: -275px;
+}
+
+aside > ul > li:nth-child(7) .nav_list {
+    top: -330px;
+}
+
+aside > ul > li:nth-child(8) .nav_list {
+    top: -385px;
+}
+
+main .nav_list li {
+    width: 270px;
+    height: 210px;
+    background-color: #F9FAFE;
+    float: left;
+    margin-left: 8px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+main .nav_list li:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+main .nav_list li img {
+    width: 155px;
+    margin: 0 auto;
+    display: block;
+}
+
+main .nav_list li > span {
+    font-size: 12px;
+}
+
+main .nav_list li > span > a:hover {
+    color: #ff6700;
+}
+
+/*轮播图部分*/
+
+main .carousel {
+    width: 996px;
+    height: 440px;
+    float: right;
+    position: relative;
+    overflow: hidden;
+}
+
+main .imgList {
+    position: relative;
+    height: 100%;
+    width: 3000px;
+}
+
+main .carousel .imgList li {
+    float: left;
+}
+
+main .carousel .imgList li img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+main .carousel span {
+    height: 50px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    font-size: 22px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: .5s;
+}
+
+main .carousel:hover span {
+    opacity: 1;
+}
+
+main .carousel .leftBtn {
+    left: 0px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+main .carousel .rightBtn {
+    right: 0px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+/* 主题结束 */
+
+/* 产品详情开始 */
+
+.products .content {
+    height: 1840px;
+}
+
+.products .content > div {
+    height: 598px;
+    margin-top: 15px;
+}
+
+.products .pd_left {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.products .pd_left_top {
+    height: 65%;
+    overflow: hidden;
+}
+
+.products .pd_left_top img {
+    width: 100%;
+    height: 389px;
+}
+
+.products .pd_left_bottom {
+    height: 35%;
+    background-color: hotpink;
+    padding-top: 75px;
+}
+.products .pd_left_bottom span {
+    display: block;
+    width: 200px;
+    height: 50px;
+    border: 1px solid #fff;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+}
+.products .pd_left_bottom span a {
+    display: block;
+    width: 200px;
+    height: 50px;
+    color: #000;
+    transition: .5s;
+}
+.products .pd_left_bottom span a:hover{
+    color: #fffdef;
+}
+
+
+.products .pd_right {
+    width: 80%;
+    height: 100%;
+    float: left;
+}
+
+.products .pd_right li {
+    width: 235px;
+    height: 290px;
+    float: left;
+    margin-right: 6px;
+    margin-top: 6px;
+    text-align: center;
+    transition: .2s;
+}
+
+.products .pd_right li:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.products .pd_right li img {
+    width: 90%;
+}
+
+.products .pd_right li span {
+    display: block;
+    margin-top: 5px;
+}
+
+.products .pd_right li:nth-child(4),
+.products .pd_right li:last-child {
+    margin-right: 0;
+}
+    /*楼层*/
+.products .floor{
+    width: 50px;
+    position: fixed;
+    top: 50%;
+    left: 5%;
+    display: none;
+}
+.products .floor li{
+    margin-top: 2px;
+    background-color: rgba(0,0,0,.6);
+}
+.products .floor li:first-child a,
+.products .floor li:last-child a{
+    line-height: 50px;
+    background-color: rgba(0,0,0,.3);
+}
+.products .floor li.active{
+    background-color: #f56600;
+}
+.products .floor li:first-child{
+    background-color: hotpink;
+}
+.products .floor li:first-child a{
+    font-size: 16px;
+    color: #fffdef;
+}
+.products .floor a{
+    display: block;
+    padding: 2px 8px;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    text-align: center;
+}
+    /* 产品详情结束*/
+
+/* 尾部开始 */
+footer {
+    background-color: #fff;
+    margin-top: 15px;
+}
+
+footer > div {
+    height: 100%;
+}
+
+footer .footer-service {
+    height: 80px;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 27px 0;
+}
+
+footer > div ul li {
+    float: left;
+    width: 19.8%;
+    height: 25px;
+    border-left: 1px solid #e0e0e0;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+}
+
+footer > div ul li:first-child {
+    border-left: 0;
+}
+
+footer .footer-links {
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+footer .footer-links .col-links {
+    float: left;
+    width: 189px;
+    height: 112px;
+    margin: 0;
+}
+
+footer .footer-links .col-links dd {
+    margin: 10px 0 0;
+    font-size: 12px;
+}
+
+footer .site-info {
+    padding: 30px 0;
+    font-size: 12px;
+}
+
+/* 尾部结束 */
